@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR with A-Frame</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <!-- Marker 1 -->
+      <a-marker preset="hiro">
+        <!-- Objek 1: Kubus Merah -->
+        <a-box position="-1 0.5 -1" color="red" scale="1 1 1" rotation="0 45 0"></a-box>
+        <!-- Objek 2: Silinder Biru -->
+        <a-cylinder position="1 0.75 -1" color="blue" scale="0.5 1 0.5" rotation="0 30 0"></a-cylinder>
+      </a-marker>
+
+      <!-- Marker 2 -->
+      <a-marker preset="kanji">
+        <!-- Objek 3: Dodecahedron Kuning -->
+        <a-dodecahedron position="-1 0.5 -1" color="yellow" scale="0.5 0.5 0.5" rotation="0 60 0"></a-dodecahedron>
+        <!-- Objek 4: Torus Hijau -->
+        <a-torus position="1 0.5 -1" color="green" radius="0.3" radius-tubular="0.1" rotation="0 90 0"></a-torus>
+        <!-- Objek 5: Tetrahedron Ungu -->
+        <a-tetrahedron position="0 1 -2" color="purple" scale="0.5 0.5 0.5" rotation="45 45 0"></a-tetrahedron>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
